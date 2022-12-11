@@ -94,20 +94,20 @@ const TemporaryDrawer = () => {
 
   return (
     <div>
-      {(['left']).map((anchor) => (
-        <IconButton key={anchor} >
-          <MenuIcon onClick={toggleDrawer(anchor, true)} sx={{color: "white", textAlign: "center"}}>
-            <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
+      
+        <IconButton key={"left"} >
+          <MenuIcon onClick={toggleDrawer("left", true)} sx={{color: "white", textAlign: "center"}}>
+            <Button onClick={toggleDrawer("left", true)}>{"left"}</Button>
           </MenuIcon>
           <Drawer
-            anchor={anchor}
-            open={state[anchor]}
-            onClose={toggleDrawer(anchor, false)}
+            anchor={'left'}
+            open={state["left"]}
+            onClose={toggleDrawer("left", false)}
           >
-            {list(anchor)}
+            {list("left")}
           </Drawer>
         </IconButton>
-      ))}
+      
     </div>
   );
 }
@@ -127,7 +127,8 @@ const NavMenu = () => (
             variant="h6"
             noWrap
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+            sx=
+          {{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
             Recipe Master
           </Typography>
