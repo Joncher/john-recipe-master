@@ -13,11 +13,21 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-export default function BasicGrid() {
+export default function CardList(data) {
   return (
     <Box sx={{margin: "auto",
-    width: "50%}"}}>
+    width: "60%}"}}>
         <Grid container spacing={2}>
+            <Grid item xs={4}>
+                <RecipeCards/>
+            </Grid>
+         
+            <Grid item xs={4}>
+                <RecipeCards/>
+            </Grid>
+            <Grid item xs={4}>
+                <RecipeCards/>
+            </Grid>
             <Grid item xs={4}>
                 <RecipeCards/>
             </Grid>

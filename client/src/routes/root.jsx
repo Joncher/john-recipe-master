@@ -7,10 +7,8 @@ export default function Root() {
       <>
           <h1>Welcome to Recipe Master</h1>
           <h2>Here you will find my favorite recipes I go back to again and again.</h2>
-          <Cardlist>
-            
-          </Cardlist>
-          <RecipeCards/>
+          <Cardlist />
+          
          
       </>
     );
