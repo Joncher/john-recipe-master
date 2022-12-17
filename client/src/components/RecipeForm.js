@@ -14,8 +14,8 @@ const url = 'http://localhost:3001/api'
           cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
           credentials: 'same-origin', // include, *same-origin, omit
           headers: {
-            'Content-Type': 'application/json'
-            // 'Content-Type': 'application/x-www-form-urlencoded',
+            'Content-Type': 'application/x-www-form-urlencoded'
+            // ',
           },
           redirect: 'follow', // manual, *follow, error
           referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
@@ -29,7 +29,7 @@ const url = 'http://localhost:3001/api'
 function RecipeForm(){
 
     const [title, setTitle] = useState("")
-    const [discription, setDiscription] = useState("")
+    const [description, setDescription] = useState("")
     const [servings, setServings] = useState(0)
     const [tags, setTags] = useState("")
     const [ingredients, setIngredients] = useState("")
@@ -67,8 +67,8 @@ function RecipeForm(){
                     margin="normal"
                     id="outlined-description-input"
                     label="Description"
-                    value={discription}
-                    onChange={(e) => setDiscription(e.target.value)}
+                    value={description}
+                    onChange={(e) => setDescription(e.target.value)}
                 />
             </Grid>
             <Grid container item sx={12}>
@@ -150,7 +150,7 @@ function RecipeForm(){
         <Button 
         variant="contained"  
         onClick={(e) => {
-            onSubmit({"title": title, "discription": discription, "servings": servings, "tags": tags, "ingredients": ingredients, "instructions": instructions, "originalURL": originalURL})
+            onSubmit({"title": title, "description": description, "servings": servings, "tags": tags, "ingredients": ingredients, "instructions": instructions, "originalURL": originalURL})
         }}
     >Submit</Button>
     </Box>
