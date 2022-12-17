@@ -6,7 +6,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Root from "./routes/root";
+import HomePage from "./routes/HomePage";
 
 import "./App.css";
 import ErrorPage from "./error-page";
@@ -14,7 +14,7 @@ import ErrorPage from "./error-page";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root/>,
+    element: <HomePage/>,
     errorElement: <ErrorPage/>
   },
 ]);
@@ -33,7 +33,6 @@ function App() {
     <div className="App" style={style.container}>
       <NavMenu/>
       <RouterProvider router={router}>
-        {content}
       </RouterProvider>
     </div>
   );
